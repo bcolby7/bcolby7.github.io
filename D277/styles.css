@@ -1,0 +1,149 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+nav {
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+}
+
+#logo a {
+    display: flex;
+    align-items: center;
+}
+
+#menu a {
+    margin-right: 5px;  
+}
+
+a:hover {
+    color: darkgreen;
+}
+
+.hero {
+    background-image: url("./assets/State-Capitol-Madison.jpg");
+    background-size: cover;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin: 0px;
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    -webkit-text-stroke: 1px rgb(63, 39, 10);    
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 80%;
+    margin: auto;
+}
+
+.sectionWrapper {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.sectionWrapper p {
+    text-align: justify;
+}
+
+.sectionWrapper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#quickNav {
+    width: 150px;
+    position: sticky;
+    top: 80px;
+    background-color: white;
+    z-index: 500;
+    margin-right: 20px;
+    align-self: flex-start;
+}
+
+#cityInfo {
+    width: 200px;
+    position: sticky;
+    top: 80px;
+    background-color: white;
+    z-index: 500;
+    align-self: flex-start;
+    border: 1px solid lightgray;
+    padding: 5px 10px;
+}
+
+#cityInfo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+form {
+    box-shadow: 0px 0px 5px lightgray;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.landmark-section {
+    position: relative;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.landmark-container {
+    overflow: hidden;
+}
+
+.landmark-image {
+    float: left;
+    margin-right: 20px !important; 
+    width: 200px;
+    height: auto;
+}
+
+.landmark-info {
+    overflow: hidden;
+}
+
+.landmark-title {
+    position: absolute;
+    top: 10px;
+    left: 240px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.landmark-info p {
+    margin-top: 60px;
+}
