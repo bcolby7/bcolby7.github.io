@@ -1,40 +1,68 @@
-:root {
-    --gradient-start: #FFD700;
-    --gradient-middle: #00FF00;
-    --gradient-end: #0000FF;
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Custom gradient text effect */
 .gradient-text {
-    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 /* Custom hover effects for cards */
 .card {
-    transition: transform 0.3s ease;
+    background-color: var(--bg-card) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(107, 63, 212, 0.1);
+    border-color: var(--gradient-middle) !important;
 }
 
-/* Custom styles for navbar brand */
+.card-title {
+    color: var(--gradient-middle) !important;
+    font-weight: 600;
+}
+
+.card-text {
+    color: var(--text-secondary);
+}
+
+/* Custom styles for navbar */
+.navbar {
+    background-color: var(--bg-dark) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .navbar-brand {
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 /* Custom section spacing */
 section {
-    scroll-margin-top: 76px; /* Accounts for fixed navbar */
+    scroll-margin-top: 76px;
+    padding: 6rem 0;
 }
 
 /* Custom link hover effects */
 .nav-link {
     position: relative;
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-primary) !important;
 }
 
 .nav-link::after {
@@ -44,7 +72,7 @@ section {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-middle));
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle));
     transition: width 0.3s ease;
 }
 
@@ -52,17 +80,48 @@ section {
     width: 100%;
 }
 
+/* Lead text styling */
+.lead {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Custom button styling */
+.btn-primary {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle));
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(107, 63, 212, 0.2);
+}
+
+/* Section headings */
+h2.gradient-text {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 0;
+    }
+    
+    h2.gradient-text {
+        font-size: 2rem;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-body {
-    background-color: #121212;
-    color: #ffffff;
-    line-height: 1.6;
 }
 
 .container {
@@ -132,4 +191,42 @@ header {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+}
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse at center, rgba(255,215,0,0.08) 0%, rgba(0,255,0,0.04) 50%, rgba(0,0,255,0.08) 100%);
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.hero-logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+    border: 4px solid rgba(255,255,255,0.08);
+    background: #232e39;
+    object-fit: contain;
+}
+
+.about-card {
+    background: rgba(20, 20, 20, 0.98);
+    border: 1.5px solid;
+    border-image: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end)) 1;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+}
+
+.project-card {
+    border: 1.5px solid;
+    border-image: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end)) 1;
+}
+
+footer {
+    background: #10151a;
 } 

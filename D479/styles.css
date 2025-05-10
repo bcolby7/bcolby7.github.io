@@ -1,0 +1,41 @@
+.hero-section {
+    position: relative;
+    background: url('./resources/hero-bg.jpg') center center/cover no-repeat;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem 2rem 1rem;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.8);
+    z-index: 1;
+}
+.hero-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.header {
+    background: #FFFFFF;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .95) 69%, rgba(255, 255, 255, .9) 100%);
+}
+
+.itinerary {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .day {
+    margin-bottom: 1rem;
+  }
+  .highlight {
+    font-style: italic;
+    color: #0a9396;
+  }
