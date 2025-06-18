@@ -1,3 +1,13 @@
+:root {
+    --bg-dark: #0d1117;
+    --bg-card: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --gradient-start: #6b3fd4;
+    --gradient-middle: #7140e0;
+    --gradient-end: #b66dff;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
